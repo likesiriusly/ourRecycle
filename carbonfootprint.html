@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<body>
+  <body background= "https://images.pexels.com/photos/761297/pexels-photo-761297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    <h1><font face="lucida console" color="white" size=15>ourRecycle ♽ Carbon Footprint</font></h1>
+    <hr>
+    <h2><font face="verdana" color="white">Find Your Household Carbon Footprint.</h2>
+    <form action="/action_page.php">
+      Natural gas:<br>
+      <input type="text" name="naturalgas">
+      <br>
+      <select>
+      <option value="kWh">kWh</option>
+      <option value="therms">therms</option>
+      <option value="US Dollars">US Dollars</option>
+    </select><br>
+
+      Heating oil:<br>
+      <input type="text" name="heatingoil">
+      <br>
+      <select>
+      <option value="kWh">kWh</option>
+      <option value="US Dollars">US Dollars</option>
+      <option value="metric tons">metric tons</option>
+      <option value="litres">litres</option>
+    </select><br>
+
+      Coal:<br>
+      <input type="text" name="coal">
+      <br>
+      <select>
+      <option value="kWh">kWh</option>
+      <option value="therms">therms</option>
+      <option value="US Dollars">US Dollars</option>
+      <option value="metric tons">metric tons</option>
+      <option value="litres">litres</option>
+    </select><br>
+
+      LPG:<br>
+      <input type="text" name="LPG">
+      <br>
+      <select>
+      <option value="kWh">kWh</option>
+      <option value="therms">therms</option>
+      <option value="US Dollars">US Dollars</option>
+      <option value="litres">litres</option>
+    </select><br>
+
+      Propane:<br>
+      <input type="text" name="propane">
+      <br>
+      <select>
+      <option value="litres">litres</option>
+      <option value="US Dollars">US Dollars</option>
+    </select><br>
+
+      Wooden pellets:<br>
+      <input type="text" name="woodenpellets">
+      <br>
+      <select>
+      <option value="metric tons">metric tons</option>
+    </select>
+    <hr>
+    <script>
+      var points = "";
+      //system.log(points)
+      function onClick() {
+          points += '8.5 metric tons';
+          document.getElementById("clicks").innerHTML = points;
+      };
+      $.cookie("var")
+      </script>
+      <button type="button" onClick="onClick()">Calculate your household footprint!</button>
+      <hr>
+      <p><font face="lucida console" color="white" size=15>Calculated carbon footprint: <a id="clicks">0</a></p>
+<hr>
+
+</body>
+</html>

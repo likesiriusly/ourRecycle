@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <body background= "https://images.pexels.com/photos/761297/pexels-photo-761297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    <h1><font face="lucida console" color="white" size=15>ourRecycle ♽ Plastic Points</font></h1>
+    <hr>
+    <p><font face="lucida console" color="white" size=3>What type of plastic have you recycled today?</font></p>
+    <select>
+      <option value="cups">cups</option>
+      <option value="straws">straws</option>
+      <option value="bags">bags</option>
+      <option value="bottles">bottles</option>
+    </select>
+    <script type="text/javascript">
+    //$.cookie("var", "10");
+    document.cookie = 0
+    var points = document.cookie;
+    //system.log(points)
+    function onClick() {
+        points += '♽';
+        document.getElementById("clicks").innerHTML = points;
+    };
+    $.cookie("var")
+    </script>
+    <button type="button" onClick="onClick()">Click me</button>
+    <p><font face="lucida console" color="white" size=15>Points: <a id="clicks">0</a></p>
+<a href="profile.html"><button style="height:50px;width:300px"><font face="lucida console" color="blue" size=3>Back to profile</button></a>
+<a href="lancerhacks.html"><button style="height:50px;width:300px"><font face="lucida console" color="blue" size=3>Back to home</button></a>
+<link href="select.css" type="text/css" rel="stylesheet">
+
+</body>
+</html>

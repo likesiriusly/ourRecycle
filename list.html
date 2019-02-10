@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<body background= "https://images.pexels.com/photos/761297/pexels-photo-761297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+<h1><font face="lucida console" color="white" size=15>ourRecycle ♽ Carbon Footprint</font></h1>
+<hr>
+<head>
+  <h3><font face="lucida console" color="white" size=5>You can use this list to set recyling tasks and to check off the ones you completed.</font></h3>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 1;
+  min-width: 300px;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 8px 12px 40px;
+  list-style-type: none;
+  background: black;
+  color: white;
+  opacity: 0.8;
+  font-size: 24px;
+  transition: 0.01s;
+
+
+}
+ul li.checked {
+  text-decoration: line-through;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+.header {
+  background-color: white;
+  opacity: 0.8;
+  padding: 30px 40px;
+  color: black;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 85%;
+  padding: 10px;
+  float: left;
+  font-size: 24px;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: black;
+  color: white;
+  float: left;
+  text-align: left;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.01s;
+  border-radius: 10;
+}
+
+</style>
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h1 style="margin:5px">To Do List</h1>
+  <input type="text" id="myInput" placeholder="What have you done today to make the world a cleaner place?">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myList">
+  <li>Use Metal Straw</li>
+  <li>Recycle Papers</li>
+  <li>Buy reusable Cups</li>
+</ul>
+
+<script>
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myList").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+<hr>
+<a href="profile.html"><button style="height:50px;width:300px"><font face="lucida console" color="blue" size=3>Back to profile</button></a>
+<a href="lancerhacks.html"><button style="height:50px;width:300px"><font face="lucida console" color="blue" size=3>Back to home</button></a>
+</body>
+</html>
